@@ -12,3 +12,11 @@ else:  # Si no es < 0, ni >= 18, ni >= 13, entonces debe ser < 13 y >= 0
     print("Te recomendamos películas clasificadas G o P.")
 
 print("\n")
+
+# Código de la tabla de multiplicar
+num_tabla = int(input("Ingresa un número para ver su tabla de multiplicar: "))
+print(f"--- Tabla del {num_tabla} ---")
+
+for i in range(1, 11):  # i tomará valores de 1 a 10
+    resultado = num_tabla * i
+    print(f"{num_tabla} x {i} = {resultado}")
