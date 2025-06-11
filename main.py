@@ -28,3 +28,29 @@ print(f"Contando hasta {numeroenteroposit} (sin incluirlo):")
 for numero in range(numeroenteroposit): 
          # range(n) genera números desde 0 hasta n-1
     print(numero, end=" ")
+
+
+#Codigo de refactorizacion (incluimos listas) rectangulo
+def calcular_area_rectangulo(base, altura):
+    return base * altura
+
+rectangulos = []  #es una variable para almacenar los datos de los rectangulos
+contador = 1   #es la variable para contar los rectangulos
+
+while True:
+    base = int(input("Ingrese la base del rectángulo: "))
+    altura = int(input("Ingrese la altura del rectángulo: "))
+    area = calcular_area_rectangulo(base, altura)
+    rectangulos.append((contador, base, altura, area)) #el append te permite agregar elementos a la lista
+    print(f"El área del rectángulo {contador} ({base}x{altura}) es: {area}")
+    contador += 1
+
+    continuar = input("¿Desea ingresar otro rectángulo? Presione Enter para continuar o 'n' para salir: ")
+    if continuar.lower() == 'n':
+        break
+
+ver_datos = input("¿Desea ver los datos de los rectángulos guardados? Presione 1 para ver: ")
+if ver_datos == '1':
+    for rectangulo in rectangulos:
+        numero, base, altura, area = rectangulo
+        print(f"Rectángulo {numero}: Base = {base}, Altura = {altura}, Área = {area}")
