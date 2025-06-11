@@ -20,3 +20,11 @@ print(f"--- Tabla del {num_tabla} ---")
 for i in range(1, 11):  # i tomará valores de 1 a 10
     resultado = num_tabla * i
     print(f"{num_tabla} x {i} = {resultado}")
+
+
+#Código bucle for
+numeroenteroposit = int(input("Ingresa un número entero positivo: "))
+print(f"Contando hasta {numeroenteroposit} (sin incluirlo):")
+for numero in range(numeroenteroposit): 
+         # range(n) genera números desde 0 hasta n-1
+    print(numero, end=" ")
