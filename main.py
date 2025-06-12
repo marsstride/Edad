@@ -135,3 +135,17 @@ promedio = suma_total / len(lista_mis_notas)
 print(f"Mis notas son: {lista_mis_notas}")
 print(f"La suma total de las notas es: {suma_total:.2f}") 
 print(f"El promedio de las notas es: {promedio:.2f}") # :.2f para mostrar dos decimales
+
+
+
+# codigo acumulador suma
+def sumar_elementos(lista_numeros):
+    acumulador_suma = 0
+    for numero in lista_numeros:
+        acumulador_suma += numero  
+    return acumulador_suma
+mis_numeros = [10, 5, 20, 15, 8, 25]
+resultado_suma = sumar_elementos(mis_numeros)
+
+print(f"La lista de números es: {mis_numeros}")
+print(f"La suma total es: {resultado_suma}")
