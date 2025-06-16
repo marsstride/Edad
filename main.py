@@ -149,3 +149,116 @@ resultado_suma = sumar_elementos(mis_numeros)
 
 print(f"La lista de números es: {mis_numeros}")
 print(f"La suma total es: {resultado_suma}")
+
+
+
+
+#Codigo encontrar mayor o numero mas grande en lista
+lista_numeros_grande = [45, 12, 78, 33, 90, 67, 21]
+if not lista_numeros_grande:
+    print("La lista está vacía, no se puede encontrar el número más grande.")
+else:
+    mayor_temporal = lista_numeros_grande[0]
+    for i in range(1, len(lista_numeros_grande)):
+        elemento_actual = lista_numeros_grande[i]
+        if elemento_actual > mayor_temporal:
+            mayor_temporal = elemento_actual
+    print(f"\nLa lista de números es: {lista_numeros_grande}")
+    print(f"El número más grande en la lista es: {mayor_temporal}")
+
+
+
+
+#Codigo de contador en lista (cuantas veces aparece un elemento en una lista)
+def contar_repeticiones(lista, elemento_buscado):
+    contador = 0
+    for elemento in lista:
+        if elemento == elemento_buscado:
+            contador += 1
+    return contador
+
+mi_lista = [1, 2, 3, 2, 4, 5, 2, 6, 7, 2, 8, 9, 2, 10]
+elemento_a_buscar = 2
+
+resultado = contar_repeticiones(mi_lista, elemento_a_buscar)
+
+print(f"El número {elemento_a_buscar} aparece {resultado} veces en la lista.")
+
+
+
+
+#Codigo de Invertir lista con range, append
+def invertir_lista(lista_original):
+    lista_invertida = []
+    for i in range(len(lista_original) - 1, -1, -1):
+        lista_invertida.append(lista_original[i])
+    return lista_invertida
+
+
+
+#Codigo de busqueda lineal(hecho en prog1)(quitar luego)
+def busqueda_lineal(lista, elemento_buscado):
+    for i in range(len(lista)):
+        if lista[i] == elemento_buscado:
+            return i
+    return -1
+# lista de prueba de números
+mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# El número que estamos buscando
+numero_buscado = 8
+# Llamamos a la función de búsqueda lineal
+indice_encontrado = busqueda_lineal(mi_lista, numero_buscado)
+# Imprimimos el resultado
+if indice_encontrado != -1:
+    print(f"El número {numero_buscado} se encontró en el índice: {indice_encontrado}")
+else:
+    print(f"El número {numero_buscado} no se encontró en la lista.")
+
+
+
+
+#Codigo de busqueda lineal
+    def busqueda_lineal(lista, elemento_buscado):
+        for i in range(len(lista)):
+            if lista[i] == elemento_buscado:
+                return i
+        return -1
+
+    mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    elemento_buscado = 8
+    #sustiui clave por elemento_buscado
+    indice_encontrado = busqueda_lineal(mi_lista, elemento_buscado)
+
+    if indice_encontrado != -1:
+        print(f"El elemento {elemento_buscado} se encontró en el índice: {indice_encontrado}")
+    else:
+        print(f"El elemento {elemento_buscado} no se encontró en la lista.")
+
+
+
+
+
+#Codigo de busqueda binaria
+def busqueda_binaria(lista_ordenada, clave):
+    izquierda = 0
+    derecha = len(lista_ordenada) - 1
+
+    while izquierda <= derecha:
+        medio = (izquierda + derecha) // 2
+
+        if lista_ordenada[medio] == clave:
+            return medio
+        elif clave > lista_ordenada[medio]:
+            izquierda = medio + 1
+        else:
+            derecha = medio - 1      
+    return -1
+# lista de prueba xd
+lista_ordenada = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91] 
+# Cuando la clave es encontrada o no
+clave_buscada_1 = 23
+indice_1 = busqueda_binaria(lista_ordenada, clave_buscada_1)
+if indice_1 != -1:
+    print(f"La clave {clave_buscada_1} se encontró en el índice: {indice_1}")
+else:
+    print(f"La clave {clave_buscada_1} no se encontró en la lista.")
