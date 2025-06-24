@@ -494,6 +494,10 @@ if __name__ == "__main__":
         print(f"Error: {e}")
 
 
+#
+
+
+
 
 #Matrices
 # 1. Crear la matriz de 3x3
@@ -750,4 +754,26 @@ def probar_suma_diagonal_principal():
 # Llamamos a la función para ejecutar las pruebas
 if __name__ == "__main__":
     probar_suma_diagonal_principal()
+print("\nPrograma realizado por Maria F. Vidaurre Alvarado")
+
+
+
+
+#Codigo Diccionario
+#Diccionario cancion
+cancion = {
+  "titulo": "Yellow",
+  "artista": "Coldplay",
+  "album": "Parachutes",
+  "duracion_segundos": 266,
+  "genero": "Alternative Rock",
+  "fecha_lanzamiento": "2000-06-26"
+}
+print("Información de la canción")
+print(f"Título: {cancion['titulo']}")
+print(f"Artista: {cancion['artista']}")
+print(f"Álbum: {cancion['album']}")
+print(f"Duración: {cancion['duracion_segundos']} segundos")
+print(f"Género: {cancion['genero']}")
+print(f"Fecha de lanzamiento: {cancion['fecha_lanzamiento']}")
 print("\nPrograma realizado por Maria F. Vidaurre Alvarado")
